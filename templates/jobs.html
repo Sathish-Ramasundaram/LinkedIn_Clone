@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LinkedIn</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../static/style.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  
+  <!--- For LinkedIn icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+<body>
+
+  <!-- Desktop Header -->
+  <header class="desktop-header">
+    <i class="fab fa-linkedin"></i>
+    <div class="search-container">
+      <i class="fas fa-search"></i>
+      <input type="text" placeholder="Search" />
+    </div>
+    <div class="nav-item" id="home-btn">
+      <a href="{{ url_for('home') }}">
+        <i class="fas fa-home"></i>
+        <span>Home</span>
+      </a>
+    </div>
+    <div class="nav-item" id="mynetwork-btn">
+      <a href="{{ url_for('mynetwork') }}">
+        <i class="fas fa-user-friends"></i>
+        <span>My Network</span>
+      </a>
+    </div>
+    <div class="nav-item" id="job-btn">
+      <i class="fas fa-briefcase"></i>
+      <span>Jobs</span>
+    </div>
+    <div class="nav-item" id="message-btn">
+      <i class="fas fa-comment-dots"></i>
+      <span>Messaging</span>
+    </div>
+    <div class="nav-item" id="notification-btn">
+      <i class="fas fa-bell"></i>
+      <span>Notifications</span>
+    </div>
+  </header>
+
+  <!-- Mobile Header -->
+  <header class="mobile-header">
+    <div class="search-container">
+      <i class="fas fa-search"></i>
+      <input type="text" placeholder="Search" />
+    </div>
+  </header>
+
+
+  <!-- Mobile Footer -->
+  <footer class="mobile-footer">
+    <div class="nav-item">
+      <i class="fas fa-home"></i>
+      <span>Home</span>
+    </div>
+  </footer>
+
+  <script src="../static/script.js"></script>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
